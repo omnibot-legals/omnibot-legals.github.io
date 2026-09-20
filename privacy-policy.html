@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy - OmniBot</title>
+  <meta name="description" content="What data OmniBot collects, why, who processes it, and how to request deletion.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233D48D8'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+  <script>try{var t=localStorage.getItem("omnibot-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <style>
+/* OmniBot legal pages: shared styles */
+
+:root {
+  --bg: #f7f8fc;
+  --panel: #eef0fa;
+  --ink: #171a33;
+  --muted: #565b7d;
+  --rule: #dadcee;
+  --accent: #3d48d8;
+
+  --font-head: "Bricolage Grotesque", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --topbar: 56px;
+  --wrap: 1080px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1022;
+    --panel: #171a36;
+    --ink: #e8eaf8;
+    --muted: #a3a9cf;
+    --rule: #282c4f;
+    --accent: #9aa3ff;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e1022;
+  --panel: #171a36;
+  --ink: #e8eaf8;
+  --muted: #a3a9cf;
+  --rule: #282c4f;
+  --accent: #9aa3ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--topbar) + 1.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 0.08em 0.35em;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 20;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-head);
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* Top bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+
+.topbar-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: var(--topbar);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.nav a {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  color: var(--ink);
+}
+
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.theme-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.theme-btn:hover {
+  background: var(--panel);
+}
+
+.theme-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 480px) {
+  .topbar-inner {
+    gap: 1rem;
+  }
+  .nav {
+    gap: 1rem;
+  }
+}
+
+/* Page header */
+.page-head {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 2rem;
+}
+
+.page-head h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.75rem;
+}
+
+.page-head .meta,
+.page-head .lede {
+  font-family: var(--font-head);
+  color: var(--muted);
+  margin: 0;
+}
+
+.page-head .meta {
+  font-size: 0.95rem;
+}
+
+.page-head .lede {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  max-width: 36rem;
+}
+
+/* Layout with sticky table of contents */
+.layout {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 1rem 1.25rem 5rem;
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  max-width: 40rem;
+}
+
+.toc {
+  position: sticky;
+  top: calc(var(--topbar) + 1.5rem);
+  align-self: start;
+  font-family: var(--font-head);
+  font-size: 0.925rem;
+  line-height: 1.4;
+}
+
+.toc summary {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.toc summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--rule);
+}
+
+.toc a {
+  display: block;
+  padding: 0.3rem 0 0.3rem 0.9rem;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  color: var(--ink);
+}
+
+.toc a[aria-current="true"] {
+  color: var(--ink);
+  font-weight: 500;
+  border-left-color: var(--accent);
+}
+
+@media (min-width: 900px) {
+  .toc summary {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+@media (max-width: 899px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .toc {
+    position: static;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+  }
+
+  .toc summary {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .toc summary::after {
+    content: "Show";
+    float: right;
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .toc[open] summary {
+    margin-bottom: 0.5rem;
+  }
+
+  .toc[open] summary::after {
+    content: "Hide";
+  }
+
+  .page-head {
+    padding-top: 2.5rem;
+  }
+}
+
+/* Summary panel */
+.summary {
+  background: var(--panel);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1.1rem 1.4rem 1.2rem;
+  margin: 0 0 2.75rem;
+}
+
+.summary h2 {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+
+.summary ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.summary li {
+  margin: 0.3rem 0;
+}
+
+.summary .note {
+  margin: 0.85rem 0 0;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Document sections */
+.doc-section {
+  margin: 0 0 2.5rem;
+}
+
+.doc-section h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.75rem;
+}
+
+.doc-section p {
+  margin: 0 0 1rem;
+}
+
+.doc-section ul {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.doc-section li {
+  margin: 0.4rem 0;
+}
+
+.doc-section li::marker {
+  color: var(--accent);
+}
+
+/* Definition rows (data lists) */
+.data-list {
+  margin: 1.25rem 0;
+  padding: 0;
+}
+
+.data-list > div {
+  border-top: 1px solid var(--rule);
+  padding: 0.9rem 0;
+}
+
+.data-list > div:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.data-list dt {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 0 0.15rem;
+}
+
+.data-list dd {
+  margin: 0;
+}
+
+/* Home page link list */
+.home-list {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 1rem 1.25rem 5rem;
+}
+
+.doc-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 42rem;
+  border-top: 1px solid var(--rule);
+}
+
+.doc-links a {
+  display: block;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.doc-links strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.doc-links span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+}
+
+.doc-links a:hover strong {
+  color: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--rule);
+}
+
+.footer-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-inner a {
+  color: var(--muted);
+}
+
+.footer-inner a:hover {
+  color: var(--ink);
+}
+
+.footer-inner p {
+  margin: 0 0 0 auto;
+}
+
+@media (max-width: 640px) {
+  .footer-inner p {
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+}
+
+/* Print */
+@media print {
+  .topbar,
+  .toc,
+  .site-footer,
+  .skip-link {
+    display: none;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+  }
+
+  a {
+    color: #000 !important;
+  }
+
+  .layout {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .summary {
+    background: none;
+    border: 1px solid #999;
+  }
+}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./">OmniBot</a>
+      <nav class="nav" aria-label="Legal pages">
+        <a href="terms">Terms</a>
+        <a href="privacy-policy" aria-current="page">Privacy</a>
+      </nav>
+      <button class="theme-btn" id="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-head">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated <time datetime="2026-09-19">September 19, 2026</time></p>
+  </div>
+
+  <div class="layout">
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <nav aria-label="Table of contents">
+        <ol>
+          <li><a href="#data-we-collect">1. Data we collect</a></li>
+          <li><a href="#dashboard-login">2. Dashboard and login</a></li>
+          <li><a href="#third-party-services">3. Third-party services</a></li>
+          <li><a href="#retention-deletion">4. Retention and deletion</a></li>
+          <li><a href="#childrens-privacy">5. Children's privacy</a></li>
+          <li><a href="#changes">6. Changes to this policy</a></li>
+          <li><a href="#contact">7. Contact</a></li>
+        </ol>
+      </nav>
+    </details>
+
+    <main class="content" id="main">
+      <aside class="summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">The short version</h2>
+        <ul>
+          <li>OmniBot stores Discord IDs along with the settings, moderation, leveling, and economy data listed below.</li>
+          <li>It never has your Discord password or email.</li>
+          <li>It reads messages live for commands, automod, and leveling, but doesn't store their content.</li>
+          <li>If you use <code>/ask</code>, your prompt is stored with your user ID and the date, and sent to OpenRouter to generate a reply.</li>
+          <li>You can ask for your data to be deleted at any time.</li>
+        </ul>
+        <p class="note">This summary is for convenience. The full policy below is what applies.</p>
+      </aside>
+
+      <p>This Privacy Policy explains what data OmniBot ("the Bot") collects, why, and how it's handled. By adding the Bot to a Discord server or using its commands, you agree to the practices described here.</p>
+
+      <section class="doc-section" id="data-we-collect">
+        <h2>1. Data we collect</h2>
+        <p>The Bot stores the following, tied to Discord IDs (server, channel, user, message, and role IDs). The Bot never has access to your Discord password or email.</p>
+
+        <dl class="data-list">
+          <div>
+            <dt>Server settings</dt>
+            <dd>Prefix, channel selections (welcome, leave, boost, and log channels), automod configuration, and command permission settings that you or your server's admins configure.</dd>
+          </div>
+          <div>
+            <dt>Moderation records</dt>
+            <dd>Warnings, mute, kick, and ban history, and moderator notes created by your server's staff using the Bot. These are tied to the target's Discord user ID and the moderator's Discord user ID.</dd>
+          </div>
+          <div>
+            <dt>Leveling data</dt>
+            <dd>Your user ID, XP, and level per server, based on message activity.</dd>
+          </div>
+          <div>
+            <dt>Economy data</dt>
+            <dd>Your user ID and virtual (non-real-money) currency balance per server.</dd>
+          </div>
+          <div>
+            <dt>Giveaway participation</dt>
+            <dd>Your user ID, if you enter a giveaway.</dd>
+          </div>
+          <div>
+            <dt>Custom commands and reaction roles</dt>
+            <dd>Text and configuration your server's admins create.</dd>
+          </div>
+          <div>
+            <dt>Bot admin and blacklist status</dt>
+            <dd>User IDs your server's admins designate as trusted bot admins or block from using the Bot.</dd>
+          </div>
+          <div>
+            <dt>AI query logs</dt>
+            <dd>If you use the <code>/ask</code> command, your user ID, your prompt text, and the date are stored. Your prompt is also sent to <strong>OpenRouter</strong>, a third-party AI routing service, to generate a response. See <a href="#third-party-services">Section 3</a>.</dd>
+          </div>
+        </dl>
+
+        <p>We do <strong>not</strong> store the full content of your regular messages. Message content is only read in real time to detect commands, check messages against automod filters (banned words, spam, invite and link blocking), and track activity for leveling. None of that scanning is logged or stored beyond the specific records above.</p>
+      </section>
+
+      <section class="doc-section" id="dashboard-login">
+        <h2>2. Dashboard and login</h2>
+        <p>If you use the OmniBot web dashboard, we use Discord OAuth2 to let you log in. This gives us temporary access to your username, avatar, and the list of servers you're in (specifically, which ones you have Manage Server permission in), solely to show you which servers you can configure.</p>
+        <p>We do not store your Discord password (Discord never shares it with us) and do not access your Discord messages, friends list, or anything outside what's needed to show you your manageable servers.</p>
+      </section>
+
+      <section class="doc-section" id="third-party-services">
+        <h2>3. Third-party services</h2>
+        <p>The Bot relies on these external services, each with its own privacy practices:</p>
+
+        <dl class="data-list">
+          <div>
+            <dt>MongoDB Atlas</dt>
+            <dd>Hosts all the data described above.</dd>
+          </div>
+          <div>
+            <dt>OpenRouter</dt>
+            <dd>Processes prompts sent through the <code>/ask</code> command to generate AI responses.</dd>
+          </div>
+          <div>
+            <dt>Google Translate</dt>
+            <dd>Processes text sent through the <code>/translate</code> command. Translated text is not stored by us.</dd>
+          </div>
+          <div>
+            <dt>Roblox public API</dt>
+            <dd>Used for the <code>/roblox</code> and <code>/robloxstats</code> commands. We only pass along the username you search for, and nothing is stored.</dd>
+          </div>
+          <div>
+            <dt>Discord</dt>
+            <dd>The platform the Bot operates on. Discord's own <a href="https://discord.com/privacy" rel="noopener">Privacy Policy</a> governs your account and messages generally.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="doc-section" id="retention-deletion">
+        <h2>4. Data retention and deletion</h2>
+        <p>Data is kept for as long as the Bot is in your server or until you request deletion. To request deletion of your data (warnings, levels, economy balance, AI query history, and so on), contact us using the details in <a href="#contact">Section 7</a>.</p>
+        <p>Removing the Bot from a server does not automatically delete that server's stored data. Request deletion separately if needed.</p>
+      </section>
+
+      <section class="doc-section" id="childrens-privacy">
+        <h2>5. Children's privacy</h2>
+        <p>The Bot is not intended for use by anyone under the minimum age required to use Discord itself (13, or higher where local law requires). We do not knowingly collect data from users below this age beyond what Discord itself already requires for an account to exist.</p>
+      </section>
+
+      <section class="doc-section" id="changes">
+        <h2>6. Changes to this policy</h2>
+        <p>This policy may be updated as the Bot's features change. Material changes will be reflected in the "Last updated" date at the top of this page.</p>
+      </section>
+
+      <section class="doc-section" id="contact">
+        <h2>7. Contact</h2>
+        <p>Questions about this policy or your data? Email <a href="mailto:samiboussaad@outlook.fr">samiboussaad@outlook.fr</a>.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="terms">Terms of Service</a>
+      <a href="privacy-policy">Privacy Policy</a>
+      <p>OmniBot is an independent project and is not affiliated with Discord.</p>
+    </div>
+  </footer>
+
+  <script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById("theme-toggle");
+
+  function isDark() {
+    var t = root.getAttribute("data-theme");
+    if (t) return t === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  function sync() {
+    if (btn) btn.setAttribute("aria-pressed", String(isDark()));
+  }
+
+  sync();
+
+  if (btn) {
+    btn.addEventListener("click", function () {
+      var next = isDark() ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("omnibot-theme", next);
+      } catch (e) {}
+      sync();
+    });
+  }
+
+  // Collapse the table of contents on small screens (it is open by default).
+  var toc = document.querySelector(".toc");
+  if (toc && window.matchMedia("(max-width: 899px)").matches) {
+    toc.removeAttribute("open");
+  }
+
+  // Highlight the current section in the table of contents.
+  var links = [].slice.call(document.querySelectorAll(".toc a"));
+  if (!links.length || !("IntersectionObserver" in window)) return;
+
+  var byId = {};
+  links.forEach(function (a) {
+    byId[a.getAttribute("href").slice(1)] = a;
+  });
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) {
+          a.removeAttribute("aria-current");
+        });
+        var active = byId[entry.target.parentElement.id];
+        if (active) active.setAttribute("aria-current", "true");
+      });
+    },
+    { rootMargin: "-80px 0px -70% 0px" }
+  );
+
+  document.querySelectorAll(".doc-section > h2").forEach(function (h) {
+    observer.observe(h);
+  });
+})();
+</script>
+</body>
+</html>
