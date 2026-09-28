@@ -555,7 +555,7 @@ code {
 
   <div class="page-head">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated <time datetime="2026-09-19">September 19, 2026</time></p>
+    <p class="meta">Last updated <time datetime="2026-09-28">September 28, 2026</time></p>
   </div>
 
   <div class="layout">
@@ -581,7 +581,7 @@ code {
           <li>OmniBot stores Discord IDs along with the settings, moderation, leveling, and economy data listed below.</li>
           <li>It never has your Discord password or email.</li>
           <li>It reads messages live for commands, automod, and leveling, but doesn't store their content.</li>
-          <li>If you use <code>/ask</code>, your prompt is stored with your user ID and the date, and sent to OpenRouter to generate a reply.</li>
+          <li>If you use <code>/ask</code> or <code>/imagine</code>, your prompt is stored with your user ID and the date, and sent to Pollinations.ai (or a fallback AI provider) to generate a reply or image.</li>
           <li>You can ask for your data to be deleted at any time.</li>
         </ul>
         <p class="note">This summary is for convenience. The full policy below is what applies.</p>
@@ -624,11 +624,15 @@ code {
           </div>
           <div>
             <dt>AI query logs</dt>
-            <dd>If you use the <code>/ask</code> command, your user ID, your prompt text, and the date are stored. Your prompt is also sent to <strong>OpenRouter</strong>, a third-party AI routing service, to generate a response. See <a href="#third-party-services">Section 3</a>.</dd>
+            <dd>If you use the <code>/ask</code> command, your user ID, your prompt text, and the date are stored. Your prompt is also sent to <strong>Pollinations.ai</strong> to generate a response. See <a href="#third-party-services">Section 3</a>.</dd>
+          </div>
+          <div>
+            <dt>AI image generation logs</dt>
+            <dd>If you use the <code>/imagine</code> command, your user ID, your prompt text, whether it was a new image or an edit, and the date are stored (the image itself is not). Your prompt, and any photo you attach to edit, is sent to <strong>Pollinations.ai</strong> or, as a fallback, <strong>xAI's Grok Imagine</strong>, to produce the result. See <a href="#third-party-services">Section 3</a>.</dd>
           </div>
         </dl>
 
-        <p>We do <strong>not</strong> store the full content of your regular messages. Message content is only read in real time to detect commands, check messages against automod filters (banned words, spam, invite and link blocking), and track activity for leveling. None of that scanning is logged or stored beyond the specific records above.</p>
+        <p>We do <strong>not</strong> save the full content of your regular messages to our database. Message content is read in real time to detect commands, check messages against automod filters (banned words, spam, invite and link blocking), and track activity for leveling. None of that scanning is logged or stored beyond the specific records above. The one exception is <code>/snipe</code> and <code>/editsnipe</code>: the most recent deleted or edited message in a channel is held briefly in the Bot's memory (not the database) so it can be shown through those commands, and is cleared whenever the Bot restarts.</p>
       </section>
 
       <section class="doc-section" id="dashboard-login">
@@ -647,8 +651,12 @@ code {
             <dd>Hosts all the data described above.</dd>
           </div>
           <div>
-            <dt>OpenRouter</dt>
-            <dd>Processes prompts sent through the <code>/ask</code> command to generate AI responses.</dd>
+            <dt>Pollinations.ai</dt>
+            <dd>Processes prompts sent through the <code>/ask</code> and <code>/imagine</code> commands to generate AI text and image responses.</dd>
+          </div>
+          <div>
+            <dt>xAI (Grok Imagine)</dt>
+            <dd>Used only as a fallback for <code>/imagine</code> if Pollinations.ai is unavailable. Receives the same prompt, and the source photo if you're editing one.</dd>
           </div>
           <div>
             <dt>Google Translate</dt>
@@ -657,6 +665,14 @@ code {
           <div>
             <dt>Roblox public API</dt>
             <dd>Used for the <code>/roblox</code> and <code>/robloxstats</code> commands. We only pass along the username you search for, and nothing is stored.</dd>
+          </div>
+          <div>
+            <dt>YouTube, SoundCloud &amp; Spotify</dt>
+            <dd>Used by <code>/play</code> to find and stream music. Spotify links are only resolved to a track title for searching; audio is played from YouTube or SoundCloud, never Spotify. We only send the search term or link you give the command.</dd>
+          </div>
+          <div>
+            <dt>waifu.pics &amp; nekos.best</dt>
+            <dd>Supply the images used by <code>/troll</code> reaction commands. No personal data is sent beyond the request itself.</dd>
           </div>
           <div>
             <dt>Discord</dt>
