@@ -189,6 +189,43 @@ code {
   background: var(--panel);
 }
 
+.btn-add {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.45rem 0.95rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  opacity: 0.88;
+}
+
+.btn-tutorial {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background: none;
+  border: 1px solid var(--rule);
+  padding: 0.44rem 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-tutorial:hover {
+  background: var(--panel);
+}
+
 .theme-btn svg {
   width: 18px;
   height: 18px;
@@ -200,6 +237,12 @@ code {
   }
   .nav {
     gap: 1rem;
+  }
+  .btn-add span {
+    display: none;
+  }
+  .btn-tutorial {
+    display: none;
   }
 }
 
@@ -547,6 +590,8 @@ code {
         <a href="terms">Terms</a>
         <a href="privacy-policy" aria-current="page">Privacy</a>
       </nav>
+      <a class="btn-tutorial" href="https://discord.gg/9agJ6KBEDX" target="_blank" rel="noopener">Tutorial to use the bot</a>
+      <a class="btn-add" href="https://discord.com/oauth2/authorize?client_id=1538341044255592478&amp;permissions=8&amp;integration_type=0&amp;scope=bot+applications.commands" target="_blank" rel="noopener"><span>+&nbsp;</span>Add Bot</a>
       <button class="theme-btn" id="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
       </button>
@@ -555,7 +600,7 @@ code {
 
   <div class="page-head">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated <time datetime="2026-09-28">September 28, 2026</time></p>
+    <p class="meta">Last updated <time datetime="2026-09-29">September 29, 2026</time></p>
   </div>
 
   <div class="layout">
